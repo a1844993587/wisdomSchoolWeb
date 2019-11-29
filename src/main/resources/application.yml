@@ -1,0 +1,27 @@
+server:
+  port: 80
+spring:
+  application:
+    name: WisdomSchool
+  datasource:
+    druid:
+      url: jdbc:mysql:///wisdomschool?characterEncoding=utf-8
+      username: root
+      password: a1844993587
+      driverClassName: com.mysql.cj.jdbc.Driver
+      initialSize: 5
+      minIdle: 5
+      maxActive: 20
+      maxWait: 10000
+      testOnBorrow: true
+      testOnReturn: false
+      timeBetweenEvictionRunsMillis: 60000
+      minEvictableIdleTimeMillis: 300000
+  freemarker:
+    prefix: /views/
+    cache: false
+    suffix: .html
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
